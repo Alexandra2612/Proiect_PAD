@@ -18,7 +18,7 @@ Clientul se poate inregistra si conecta in aplicatie.Acesta va fi adaugat intr-o
 Persoana ce livreaza comenzi se poate de asemenea inregistra si conecta,reprezentand si aceasta un tip de client in aplicatie.Pentru ambele tipuri de clienti inregistarea se face printr-un username,o parola,numele,prenumele si e-mailul.Conectarea in aplicatie se face ori cu adresa de email si parola setata,ori cu facebook-ul.Totodata dupa conectare acestia isi vor adauga numarul de telefon pentru a putea comunica in caz de nevoie.Toate datele vor fi stocate in baza de date si trimise cumparatorului si livratorului in momentul preluarii comenzii.Parolele sunt singurele informatii ce nu vor fi transmise,iar acestea vor fi criptate pentru securitatea conturilor utilizatorilor.Pentru a prelua o comanda tipul de utilizator ce are aceasta optiune va putea vizualiza o lista cu comenzi si va putea sa selecteze o anumita comanda pe care in cazul in care va apasa pe butonul de accept o va avea atribuita lui.Atribuirea se face prin trimiterea unui mesaj de accept pentru o anumita comanda catre server care va scoate din lista de comenzi disponibile comanda respectiva.Dupa livrare acest tip de client va apasa pe butonul de comanda livrata si astfel va putea reveni la lista de comenzi disponibile pentru preluare.La final acesta se poate deconecta la fel ca si cumparatorii.
 
 
-Tehnologii folosite:pentru baza de date vom folosi MySQL,pentru backend,Java,iar pentru frontend,React
+Tehnologii folosite:pentru baza de date vom folosi MySQL,pentru backend,Java,iar pentru frontend,Angular
 
 
 Functionalitati:
