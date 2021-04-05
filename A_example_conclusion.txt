@@ -1,0 +1,6 @@
+https://medium.com/bb-tutorials-and-thoughts/how-to-develop-and-build-angular-app-with-java-backend-87fb603c6e17
+
+Exemplul folosea framework-ul Angular si un backend in Java pentru a exemplifica o legatura client-server,mai exact un acces la baza de date de pe server.
+S-a folosit o baza de date simplificata,H2 si au fost folosite porturile 4200-Angular-fontend si 8080-backend-Spring Boot 
+
+Am avut probleme cu faptul ca portul 8080 era ocupat,dar s-a rezolvat.Acest exemplu ne-a ajutat sa intelegem mai bine legatura frontend-backend intr-o aplicatie distribuita.
