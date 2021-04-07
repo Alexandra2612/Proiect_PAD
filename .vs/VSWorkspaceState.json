@@ -1,0 +1,19 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\ionic-form-ui",
+    "\\src\\ionic-form-ui\\src",
+    "\\src\\ionic-form-ui\\src\\app",
+    "\\src\\main",
+    "\\src\\main\\java\\com",
+    "\\src\\main\\java\\com\\example",
+    "\\src\\main\\java\\com\\example\\FoodDelivery",
+    "\\src\\test\\java",
+    "\\src\\test\\java\\com",
+    "\\src\\test\\java\\com\\example",
+    "\\src\\test\\java\\com\\example\\FoodDelivery"
+  ],
+  "SelectedNode": "\\src\\ionic-form-ui\\src\\app\\home",
+  "PreviewInSolutionExplorer": false
+}
