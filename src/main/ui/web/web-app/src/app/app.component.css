@@ -1,0 +1,36 @@
+
+
+div{
+  position: fixed;
+  background-color: wheat;
+
+  margin-left: 400px;
+
+
+}
+
+#login {
+  margin: auto;
+  margin-left: 1200px;
+  align-self: flex-end;
+  font-size: large;
+  text-align: center;
+
+}
+
+#logout {
+  margin: auto;
+  margin-left: 1190px;
+  align-self: flex-end;
+  font-size: large;
+  text-align: center;
+
+}
+.logo{
+  width: 90px;
+}
+button{
+  color: brown;
+
+  font-size: xx-large;
+}

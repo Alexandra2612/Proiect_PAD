@@ -1,0 +1,30 @@
+<a id="logo"  href="https://www.google.com/"><img style=" width: 90px"  src="../../assets/a.png"></a>
+<div id="login" *ngIf="notUser">
+  <mat-icon  style="color: blue;">account_box</mat-icon>
+  <a routerLinkActive="active" [routerLink]="['/login']">Login</a>
+</div>
+<div id="logout" *ngIf="currentUser">
+  <mat-icon  style="color: blue;">account_box</mat-icon>
+  <a >Logout</a>
+</div>
+
+<div>
+  <button mat-button >Above</button>
+
+
+  <button mat-button >Below</button>
+
+  <button mat-button ="beforeMenu">Before</button>
+
+
+
+  <button mat-button="afterMenu">After</button>
+</div>
+
+
+
+
+<app-home
+  [currentUser]="currentUser">
+</app-home>
+<router-outlet></router-outlet>
