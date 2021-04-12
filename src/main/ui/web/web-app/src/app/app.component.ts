@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'web-app';
   currentUser= false;
-  notUser= true;
+  notUser=true;
 }

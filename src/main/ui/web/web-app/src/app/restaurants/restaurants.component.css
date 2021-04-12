@@ -1,0 +1,25 @@
+#hello_user{
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 16%;
+
+  display: flex; /* so child elements can use flexbox stuff too! */
+
+  background-color: beige;
+  margin-left: 70px;
+  margin-right: 70px;
+
+}
+.product-image img {
+  width: 35%
+}

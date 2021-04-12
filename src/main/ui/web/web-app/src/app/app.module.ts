@@ -16,7 +16,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {Router, RouterModule} from "@angular/router";
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/home.component'
+import { MenuComponent } from './menu/menu.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 
 
@@ -26,6 +28,8 @@ import { HomeComponent } from './home/home.component';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
+    MenuComponent,
+    RestaurantsComponent,
 
 
 

@@ -1,11 +1,11 @@
 
 
-div{
-  position: fixed;
-  background-color: wheat;
+#menu{
+  margin: auto;
 
-  margin-left: 400px;
-
+  align-self: center;
+  font-size: large;
+  text-align: center;
 
 }
 
