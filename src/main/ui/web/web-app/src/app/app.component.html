@@ -8,7 +8,8 @@
   <a >Logout</a>
 </div>
 
-<div id="menu" *ngIf="currentUser" >
+<div class="menu" *ngIf="currentUser" >
+  <button mat-button routerLinkActive="active" [routerLink]="['/']">Home</button>
   <button routerLinkActive="active" mat-button [routerLink]="['/restaurants']" >Restaurante  </button>
 
   <button mat-button >Comenzi     </button>
@@ -16,12 +17,12 @@
 
 
 </div>
-<div id="menu" *ngIf="notUser" >
+<div class="menu" *ngIf="notUser" >
+  <button mat-button routerLinkActive="active" [routerLink]="['/']">Home</button>
   <button mat-button routerLinkActive="active" mat-button [routerLink]="['/restaurants']">Restaurante  </button>
 
 
 
 </div>
-
-
+<br><br><br><br>
 <router-outlet></router-outlet>

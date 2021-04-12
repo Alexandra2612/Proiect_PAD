@@ -19,6 +19,7 @@ import {Router, RouterModule} from "@angular/router";
 import { HomeComponent } from './home/home.component'
 import { MenuComponent } from './menu/menu.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -47,6 +48,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
     MatMenuModule,
     RouterModule,
     ReactiveFormsModule,
+    MatGridListModule
 
   ],
   providers: [],
