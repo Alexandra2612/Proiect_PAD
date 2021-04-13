@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-restaurants',
@@ -12,4 +13,5 @@ export class RestaurantsComponent implements OnInit {
   ngOnInit(): void {
   }
   @Input() currentUser: any;
+
 }

@@ -1,6 +1,6 @@
 #hello_user{
   position: relative;
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: center;
 }
 .menu {
@@ -11,8 +11,7 @@
 
  align-items: center;
   margin-top: 5%;
-
-
+  margin-bottom: 5%;
 }
 .product-image {
 
@@ -28,3 +27,6 @@ img{
   position: center;
 
 }
+
+
+

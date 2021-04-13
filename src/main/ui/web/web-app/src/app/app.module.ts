@@ -16,10 +16,13 @@ import {MatIconModule} from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {Router, RouterModule} from "@angular/router";
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from '../app/home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+
+
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -48,7 +51,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatMenuModule,
     RouterModule,
     ReactiveFormsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatInputModule
 
   ],
   providers: [],
