@@ -1,0 +1,32 @@
+#hello_user{
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+}
+.menu {
+
+}
+
+.product-card {
+
+ align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.product-image {
+
+  text-align: center;
+
+}
+img{
+  width: 35%;
+}
+
+.product-info{
+  text-align: center;
+  position: center;
+
+}
+
+
+

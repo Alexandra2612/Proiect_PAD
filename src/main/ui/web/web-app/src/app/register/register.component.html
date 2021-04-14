@@ -1,0 +1,36 @@
+<mat-card tabindex="-1">
+  <mat-card-content>
+    <div class="container">
+      <div class="logo">Create a new account!</div>
+      <div class="register-item">
+        <form #myform="ngForm" (ngSubmit)="register(myform)" class="form form-register">
+          <pre></pre>
+          <div class="form-field">
+            <label class="user" for="register-username"><span class="hidden">Name</span></label>
+            <pre></pre>
+            <input name="name" id="register-username" type="email" class="form-input" placeholder="Name" ngModel required>
+          </div>
+          <pre></pre>
+          <div class="form-field">
+            <label class="user" for="register-email"><span class="hidden">Email</span></label>
+            <pre></pre>
+            <input name="email" id="register-email" type="email" class="form-input" placeholder="Email" ngModel required>
+          </div>
+          <pre></pre>
+          <div class="form-field">
+            <label class="lock" for="register-password"><span class="hidden">Password</span></label>
+            <pre></pre>
+            <input name="password" id="register-password" type="password" class="form-input" placeholder="Password" ngModel required>
+          </div>
+          <pre></pre>
+          <div class="form-field">
+            <button mat-raised-button color='warm'>Register</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <pre></pre>
+    <a [routerLink]="['/login']" style="color: blue;"> Back to login</a>
+  </mat-card-content>
+</mat-card>

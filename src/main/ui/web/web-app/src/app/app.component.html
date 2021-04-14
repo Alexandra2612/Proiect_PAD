@@ -1,0 +1,28 @@
+<a id="logo" routerLinkActive="active" mat-button [routerLink]="['/']"><img style=" width: 90px"  src="../../assets/a.png"></a>
+<div id="login" *ngIf="notUser">
+  <mat-icon  style="color: blue;">account_box</mat-icon>
+  <a routerLinkActive="active" [routerLink]="['/login']">Login</a>
+</div>
+<div id="logout" *ngIf="currentUser">
+  <mat-icon  style="color: blue;">account_box</mat-icon>
+  <a >Logout</a>
+</div>
+
+<div class="menu" *ngIf="currentUser" >
+  <button mat-button routerLinkActive="active" [routerLink]="['/']">Home</button>
+  <button routerLinkActive="active" mat-button [routerLink]="['/restaurants']" >Restaurante  </button>
+
+  <button mat-button >Comenzi     </button>
+  <button mat-button >Cont</button>
+
+
+</div>
+<div class="menu" *ngIf="notUser" >
+  <button mat-button routerLinkActive="active" [routerLink]="['/']">Home</button>
+  <button mat-button routerLinkActive="active" mat-button [routerLink]="['/restaurants']">Restaurante  </button>
+
+
+
+</div>
+<br><br><br><br>
+<router-outlet></router-outlet>

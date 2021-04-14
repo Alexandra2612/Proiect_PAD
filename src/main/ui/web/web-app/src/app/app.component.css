@@ -1,0 +1,36 @@
+
+
+.menu{
+  margin: auto;
+
+  align-self: center;
+  font-size: large;
+  text-align: center;
+
+}
+
+#login {
+  margin: auto;
+
+  align-self: flex-end;
+  font-size: large;
+  text-align: right;
+
+}
+
+#logout {
+  margin: auto;
+  margin-left: 1190px;
+  align-self: flex-end;
+  font-size: large;
+  text-align: center;
+
+}
+.logo{
+  width: 90px;
+}
+button{
+  color: brown;
+
+  font-size: xx-large;
+}

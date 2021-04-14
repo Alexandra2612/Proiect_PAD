@@ -1,0 +1,33 @@
+mat-card {
+  max-width: 500px;
+  max-height: 500px;
+  margin:auto;
+  margin-top: 50px;
+  text-align: center;
+  background-color: whitesmoke;
+  margin-bottom: 100px;
+}
+
+
+
+a,h2,h1,h3, label{
+  color: black;
+}
+
+mat-form-field {
+  display: block;
+  text-align: center;
+
+}
+
+input{
+  color: black;
+}
+label{
+  font-size: 15px;
+  font-weight: 500;
+}
+.logo{
+  font-size: large;
+  color: blue;
+}
