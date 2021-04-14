@@ -4,22 +4,24 @@
   text-align: center;
 }
 .menu {
+   collapse:container;
 
 }
 
 .product-card {
 
  align-items: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin:auto;
+  height: 40%;
+  width: 50%
 }
 .product-image {
 
   text-align: center;
-
+  margin: auto;
 }
 img{
-  width: 35%;
+  height: 200px;
 }
 
 .product-info{
@@ -27,6 +29,15 @@ img{
   position: center;
 
 }
+.row{
+  display: flex;
+  margin-bottom: 70px;
+  margin-right: 200px;
+  margin-left: 200px;
 
+}
+button{
+  background-color: papayawhip;
+}
 
 

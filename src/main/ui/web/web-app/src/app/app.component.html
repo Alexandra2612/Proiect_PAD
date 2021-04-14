@@ -1,25 +1,29 @@
 <a id="logo" routerLinkActive="active" mat-button [routerLink]="['/']"><img style=" width: 90px"  src="../../assets/a.png"></a>
-<div id="login" *ngIf="notUser">
-  <mat-icon  style="color: blue;">account_box</mat-icon>
-  <a routerLinkActive="active" [routerLink]="['/login']">Login</a>
-</div>
-<div id="logout" *ngIf="currentUser">
-  <mat-icon  style="color: blue;">account_box</mat-icon>
-  <a >Logout</a>
+<div class="menu_right" *ngIf="notUser">
+  <button mat-button   class="shopping_cart" routerLinkActive="active"  [routerLink]="['/chart']"> <mat-icon>shopping_cart</mat-icon>Chart</button>
+  <button mat-button routerLinkActive="active"  [routerLink]="['/restaurants']" ><mat-icon >account_box</mat-icon> Login</button>
+
 </div>
 
-<div class="menu" *ngIf="currentUser" >
+<div class="menu_right" *ngIf="currentUser">
+  <button mat-button [matMenuTriggerFor]="menu"><mat-icon>account_box</mat-icon>My_account</button>
+  <mat-menu style="font-size: 20px"#menu="matMenu">
+    <button mat-menu-item>About me</button>
+    <button mat-menu-item>Orders</button>
+  </mat-menu>
+
+  <button mat-button class="shopping_cart" routerLinkActive="active"  [routerLink]="['/chart']"><mat-icon>shopping_cart</mat-icon>Chart</button>
+ <button mat-button style="color: black">Logout</button>
+
+</div>
+
+
+
+
+<div class="menu" >
   <button mat-button routerLinkActive="active" [routerLink]="['/']">Home</button>
   <button routerLinkActive="active" mat-button [routerLink]="['/restaurants']" >Restaurante  </button>
 
-  <button mat-button >Comenzi     </button>
-  <button mat-button >Cont</button>
-
-
-</div>
-<div class="menu" *ngIf="notUser" >
-  <button mat-button routerLinkActive="active" [routerLink]="['/']">Home</button>
-  <button mat-button routerLinkActive="active" mat-button [routerLink]="['/restaurants']">Restaurante  </button>
 
 
 

@@ -12,6 +12,6 @@ export class RestaurantsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  @Input() currentUser: any;
+
 
 }
