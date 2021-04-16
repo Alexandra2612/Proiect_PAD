@@ -1,0 +1,15 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  ion-button {
+    text-transform: capitalize;
+    font-weight: 300;
+    --background: #da6b1c;
+    --border-radius: 7px;
+    --box-shadow: none;
+  }
+}
+
+

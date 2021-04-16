@@ -21,7 +21,9 @@
 
     <ion-row>
       <ion-col>
-        <ion-button  [routerLink]="['/main-page']" type="submit" color="danger" expand="block">Sign In</ion-button>
+        <div class="buttons">
+          <ion-button [routerLink]="['/main-page']" type="submit"  expand="block">Sign In</ion-button>
+        </div>
         <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
       </ion-col>
     </ion-row>
