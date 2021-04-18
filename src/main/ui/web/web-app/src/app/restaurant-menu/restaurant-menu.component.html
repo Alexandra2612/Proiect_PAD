@@ -1,0 +1,49 @@
+
+<div id="presentation">
+  <h1>Aici e numele restaurantului</h1>
+  <p>Aici e prezentarea restaurantului</p>
+</div>
+<div class="box">
+    <img src="assets/m1.jpg">
+    <div class="content">
+      <div>Descriere</div>
+      <div class="add_button">
+        <button mat-button>Comanda</button>
+      </div>
+    </div>
+</div>
+<div class="box">
+  <img src="assets/m2.jpg">
+  <div class="content">
+    <div>Descriere produs 2 gvfrdctetfyvubn tygb hygftv uyv y hgy f  gf
+      `toppinguri` VARCHAR(150) NOT NULL,
+      PRIMARY KEY (`id`)
+      )ENGINE=InnoDB;
+
+      CREATE TABLE `topping` (
+      `id` INT(11) NOT NULL AUTO_INCREMENT,
+      `nume` VARCHAR(100) NOT NULL,
+      `pret` DOUBLE NOT NULL,
+      `gramaj` INT(11) NOT NULL,
+      PRIMARY KEY (`id`)
+      )ENGINE=InnoDB;
+
+      CREATE TABLE `comanda` (
+      `id` INT(11) NOT NULL AUTO_INCREMENT,
+      `clientId` INT(11) NOT NULL,
+      `livratorId` INT(11) NOT NULL,
+      `restaurantId` INT(11) NOT NULL,
+      `continut` VARCHAR(400) NOT NULL,
+      `prettotal` INT(11) NOT NULL,
+      `metodaplata` VARCHAR(1) NOT NULL,
+      `adresa` VARCHAR(400) NOT NULL,
+      PRIMARY KEY (`id`),
+      FOREIGN KEY (`clientId`) REFERENCES `user`(`id`),
+      FOREIGN KEY (`livratorId`) REFERENCES `user`(`id`),
+      FOREIGN KEY (`restaurantId`) REFERENCES `restaurant`(`id`)
+      )ENGINE=InnoDB;        ffffffffffff</div>
+    <div class="add_button">
+      <button mat-button>Comanda</button>
+    </div>
+  </div>
+</div>

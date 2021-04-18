@@ -1,7 +1,7 @@
 <a id="logo" routerLinkActive="active" mat-button [routerLink]="['/']"><img style=" width: 90px"  src="../../assets/a.png"></a>
 <div class="menu_right" *ngIf="notUser">
   <button mat-button   class="shopping_cart" routerLinkActive="active"  [routerLink]="['/chart']"> <mat-icon>shopping_cart</mat-icon>Chart</button>
-  <button mat-button routerLinkActive="active"  [routerLink]="['/restaurants']" ><mat-icon >account_box</mat-icon> Login</button>
+  <button mat-button routerLinkActive="active"  [routerLink]="['/login']" ><mat-icon >account_box</mat-icon> Login</button>
 
 </div>
 
@@ -23,9 +23,6 @@
 <div class="menu" >
   <button mat-button routerLinkActive="active" [routerLink]="['/']">Home</button>
   <button routerLinkActive="active" mat-button [routerLink]="['/restaurants']" >Restaurante  </button>
-
-
-
 
 </div>
 <br><br><br><br>

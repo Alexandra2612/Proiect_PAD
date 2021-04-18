@@ -23,6 +23,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 
 import {MatInputModule} from '@angular/material/input';
+import { RestaurantMenuComponent } from './restaurant-menu/restaurant-menu.component';
 
 
 
@@ -34,6 +35,7 @@ import {MatInputModule} from '@angular/material/input';
     HomeComponent,
     MenuComponent,
     RestaurantsComponent,
+    RestaurantMenuComponent,
 
 
 

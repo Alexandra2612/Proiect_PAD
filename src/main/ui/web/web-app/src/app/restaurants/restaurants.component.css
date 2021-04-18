@@ -5,23 +5,27 @@
 }
 .menu {
    collapse:container;
-
+   align-self: center;
+  margin: auto;
 }
 
 .product-card {
 
- align-items: center;
+
   margin:auto;
-  height: 40%;
-  width: 50%
+  border-radius: 10px;
+
+
 }
 .product-image {
-
-  text-align: center;
   margin: auto;
+
 }
 img{
   height: 200px;
+  border-radius: 10px;
+  text-align: center;
+
 }
 
 .product-info{
@@ -31,9 +35,8 @@ img{
 }
 .row{
   display: flex;
+  margin:auto;
   margin-bottom: 70px;
-  margin-right: 200px;
-  margin-left: 200px;
 
 }
 button{

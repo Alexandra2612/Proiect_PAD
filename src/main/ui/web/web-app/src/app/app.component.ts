@@ -9,9 +9,7 @@ export class AppComponent {
 
   title = 'Food Delivery';
   //static currentUser = "alina";
-  notUser = true;
+  notUser =true;
   currentUser=false;
-
-
 
 }

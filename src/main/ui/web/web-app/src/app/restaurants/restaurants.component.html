@@ -11,7 +11,7 @@
     <div class="product-info">
       <h1>Restaurant MAGIC</h1>
       <h6>Descriere</h6>
-      <button mat-raised-button>Vezi restaurantul </button>
+      <button mat-raised-button routerLinkActive="active"  [routerLink]="['/restaurants',restaurant]">Vezi restaurantul </button>
     </div>
   </div>
 
@@ -30,6 +30,16 @@
  </div>
 
   <div class="row">
+    <div class="product-card">
+      <div class="product-image">
+        <img src ="assets/r2.jpg">
+      </div>
+      <div class="product-info">
+        <h1>Restaurant Apollo</h1>
+        <h6>Descriere</h6>
+        <button mat-raised-button>Vezi restaurantul </button>
+      </div>
+    </div>
   <div class="product-card">
     <div class="product-image">
       <img src ="assets/r1.jpg">
@@ -43,15 +53,6 @@
 
 
   <br>
-  <div class="product-card">
-    <div class="product-image">
-      <img src ="assets/r2.jpg">
-    </div>
-    <div class="product-info">
-      <h1>Restaurant Apollo</h1>
-      <h6>Descriere</h6>
-      <button mat-raised-button>Vezi restaurantul </button>
-    </div>
-  </div>
+
   </div>
 </section>
