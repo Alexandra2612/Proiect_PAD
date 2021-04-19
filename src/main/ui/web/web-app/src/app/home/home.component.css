@@ -1,0 +1,15 @@
+img{
+  width: 650px;
+}
+
+mat-grid-list{
+  margin:auto;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+ mat-icon{
+   margin-left: 20px;
+ }
+ #strengths{
+   text-align: center;
+ }

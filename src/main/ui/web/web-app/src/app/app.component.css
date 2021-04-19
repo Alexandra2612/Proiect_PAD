@@ -42,3 +42,12 @@ mat-item{
 .menu_right button{
   background-color: papayawhip;
 }
+
+
+.contact{
+  background-color: darkgray;
+  text-align: center;
+  border-top: 5px solid black;
+  margin-bottom: 0px;
+  padding: 10px;
+}
