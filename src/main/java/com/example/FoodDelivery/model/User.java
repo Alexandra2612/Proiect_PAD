@@ -28,20 +28,20 @@ public class User {
     private String adrese;
 
     @Column(name = "phoneNumber")
-    private String phoneNumber;
+    private String phonenumber;
 
     public User() {
 
     }
 
-    public User(char rol, String email, String nickname, String nume, String prenume, String adrese, String phoneNumber) {
+    public User(char rol, String email, String nickname, String nume, String prenume, String adrese, String phonenumber) {
         this.rol = rol;
         this.email = email;
         this.nickname = nickname;
         this.nume = nume;
         this.prenume = prenume;
         this.adrese = adrese;
-        this.phoneNumber = phoneNumber;
+        this.phonenumber = phonenumber;
     }
 
     public char getRol() {
@@ -93,11 +93,11 @@ public class User {
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        return phonenumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
 
     @Override
@@ -110,7 +110,7 @@ public class User {
                 ", nume='" + nume + '\'' +
                 ", prenume='" + prenume + '\'' +
                 ", adrese='" + adrese + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
+                ", phonenumber='" + phonenumber + '\'' +
                 ']';
     }
 }

@@ -56,6 +56,7 @@ public class UserController {
                     .save(new User(user.getRol(), user.getEmail(),user.getNickname(),user.getNume(),user.getPrenume(),user.getAdrese(),user.getPhoneNumber()));
             return new ResponseEntity<>(_user, HttpStatus.CREATED);
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -83,15 +84,6 @@ public class UserController {
     public ResponseEntity<HttpStatus> deleteUser(@PathVariable("id") long id) {
         try {
             userRepository.deleteById(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-    @DeleteMapping("/user")
-    public ResponseEntity<HttpStatus> deleteAllUsers() {
-        try {
-            userRepository.deleteAll();
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
