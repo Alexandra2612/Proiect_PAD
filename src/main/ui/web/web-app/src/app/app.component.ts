@@ -11,9 +11,6 @@ export class AppComponent {
   //static currentUser = "alina";
   notUser =false;
   currentUser: boolean =true;
-  log_out=0;
-
-
 
   logout_alert() {
     this.currentUser=false;

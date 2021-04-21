@@ -2,7 +2,6 @@
 <div class="menu_right" *ngIf="notUser">
   <button mat-button   class="shopping_cart" routerLink="/chart"> <mat-icon>shopping_cart</mat-icon>Chart</button>
   <button mat-button routerLinkActive="active"  routerLink="/login" ><mat-icon >account_box</mat-icon> Login</button>
-
 </div>
 
 <div class="menu_right" *ngIf="currentUser">
@@ -11,21 +10,15 @@
     <button mat-menu-item>About me</button>
     <button mat-menu-item>Orders</button>
   </mat-menu>
-
   <button mat-button class="shopping_cart" routerLinkActive="active"  routerLink="/chart"><mat-icon>shopping_cart</mat-icon>Chart</button>
- <button mat-button style="color: black" (click)="logout_alert()">Logout</button>
-
-
+  <button mat-button style="color: black" (click)="logout_alert()">Logout</button>
 </div>
-
-
-
 
 <div class="menu" >
   <button mat-button  routerLink="/" routerLinkActive="active">Home</button>
   <button routerLinkActive="active" mat-button routerLink="/restaurants" >Restaurante  </button>
-
 </div>
+
 <br>
 <router-outlet></router-outlet>
 <div class="contact">
