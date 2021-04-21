@@ -5,6 +5,10 @@ import { RegisterComponent } from '../app/register/register.component'
 import {HomeComponent} from "./home/home.component"
 import {RestaurantsComponent} from "./restaurants/restaurants.component";
 import {RestaurantMenuComponent} from "./restaurant-menu/restaurant-menu.component";
+import {ChartComponent} from "./chart/chart.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+
+
 const  routes:  Routes  = [
   {path:  'auth', loadChildren:  './auth/auth.module#AuthModule'},
   { path: '', component: HomeComponent},
@@ -23,7 +27,11 @@ const  routes:  Routes  = [
   },
   {
     path: 'restaurants/:id', component: RestaurantMenuComponent
-  }
+  },
+  {
+    path: 'chart', component : ChartComponent
+  },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

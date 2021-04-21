@@ -1,3 +1,4 @@
+
 <mat-card>
   <mat-card-content>
     <div class="container">
@@ -5,31 +6,38 @@
       <pre></pre>
       <br>
       <div class="login-item">
-        <form #loginform="ngForm" (ngSubmit)="login()" class="form form-register">
+        <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()" class="form form-register">
 
           <pre></pre>
           <div class="form-field">
-            <label class="user" for="login-username"><span class="hidden">Username</span></label>
+            <label class="user" ><span class="hidden">Username</span></label>
             <pre></pre>
-            <input matInput name="name" id="login-username" type="email" class="form-input" placeholder="Username" ngModel required>
+            <input   type="text" formControlName="username" required placeholder= "Username"  >
+
           </div>
+
+
           <pre></pre>
           <div class="form-field">
-            <label class="lock" for="login-password"><span class="hidden">Password</span></label>
+            <label class="lock" ><span class="hidden">Password</span></label>
             <pre></pre>
-            <input  matInput name="password" id="login-password" type="password" class="form-input" placeholder="Password" ngModel required>
+            <input  required  formControlName="password"  type="password" placeholder="Password" >
           </div>
           <pre></pre>
           <br>
+
           <div class="form-field">
             <button mat-raised-button color="warm">Login</button>
           </div>
-
+          <div style="color: #751124" *ngIf=valid >
+            Introdu username si parola!
+          </div>
         </form>
+
       </div>
     </div>
     <pre></pre>
     <p style="color: red;">You don't have an account?</p>
-    <a [routerLink]="['/register']" style="color: crimson;"> Register</a>
+    <a routerLink="/register" style="color: crimson;"> Register</a>
   </mat-card-content>
 </mat-card>

@@ -9,7 +9,14 @@ export class AppComponent {
 
   title = 'Food Delivery';
   //static currentUser = "alina";
-  notUser =true;
-  currentUser=false;
+  notUser =false;
+  currentUser: boolean =true;
+  log_out=0;
 
+
+
+  logout_alert() {
+    this.currentUser=false;
+    this.notUser=true;
+  }
 }
