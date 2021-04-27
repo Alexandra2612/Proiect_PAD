@@ -9,13 +9,13 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "clientId")
+    @Column(name = "clientid")
     private long clientId;
 
-    @Column(name = "livratorId")
+    @Column(name = "livratorid")
     private long livratorId;
 
-    @Column(name = "restaurantId")
+    @Column(name = "restaurantid")
     private long restaurantId;
 
     @Column(name = "continut")
@@ -27,25 +27,25 @@ public class Order {
     @Column(name = "metodaplata")
     private char metodaplata;
 
-    @Column(name = "prenume")
-    private String prenume;
-
     @Column(name = "adresa")
     private String adresa;
+
+    @Column(name = "finished")
+    private int finished;
 
     public Order() {
 
     }
 
-    public Order(int clientId, int livratorId, int restaurantId, String continut, int prettotal, char metodaplata, String prenume, String adresa) {
+    public Order(long clientId, long livratorId, long restaurantId, String continut, int prettotal, char metodaplata, String adresa) {
         this.clientId = clientId;
         this.livratorId = livratorId;
         this.restaurantId = restaurantId;
         this.continut = continut;
         this.prettotal = prettotal;
         this.metodaplata = metodaplata;
-        this.prenume = prenume;
         this.adresa = adresa;
+        this.finished = 0;
     }
 
     public long getClientId() {
@@ -96,20 +96,20 @@ public class Order {
         this.metodaplata = metodaplata;
     }
 
-    public String getPrenume() {
-        return prenume;
-    }
-
-    public void setPrenume(String prenume) {
-        this.prenume = prenume;
-    }
-
     public String getAdresa() {
         return adresa;
     }
 
     public void setAdresa(String adresa) {
         this.adresa = adresa;
+    }
+
+    public int getFinished() {
+        return finished;
+    }
+
+    public void setFinished(int finished) {
+        this.finished = finished;
     }
 
     @Override
@@ -119,10 +119,10 @@ public class Order {
                 ", clientId=" + clientId +
                 ", livratorId=" + livratorId +
                 ", restaurantId=" + restaurantId +
+                ", finished=" + finished +
                 ", continut='" + continut + '\'' +
                 ", prettotal=" + prettotal +
                 ", metodaplata=" + metodaplata +
-                ", prenume='" + prenume + '\'' +
                 ", adresa='" + adresa + '\'' +
                 '}';
     }
