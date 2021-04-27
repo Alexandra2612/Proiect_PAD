@@ -10,13 +10,13 @@ public class Order {
     private long id;
 
     @Column(name = "clientId")
-    private int clientId;
+    private long clientId;
 
     @Column(name = "livratorId")
-    private int livratorId;
+    private long livratorId;
 
     @Column(name = "restaurantId")
-    private int restaurantId;
+    private long restaurantId;
 
     @Column(name = "continut")
     private String continut;
@@ -48,27 +48,27 @@ public class Order {
         this.adresa = adresa;
     }
 
-    public int getClientId() {
+    public long getClientId() {
         return clientId;
     }
 
-    public void setClientId(int clientId) {
+    public void setClientId(long clientId) {
         this.clientId = clientId;
     }
 
-    public int getLivratorId() {
+    public long getLivratorId() {
         return livratorId;
     }
 
-    public void setLivratorId(int livratorId) {
+    public void setLivratorId(long livratorId) {
         this.livratorId = livratorId;
     }
 
-    public int getRestaurantId() {
+    public long getRestaurantId() {
         return restaurantId;
     }
 
-    public void setRestaurantId(int restaurantId) {
+    public void setRestaurantId(long restaurantId) {
         this.restaurantId = restaurantId;
     }
 
