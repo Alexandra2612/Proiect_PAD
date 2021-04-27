@@ -1,11 +1,9 @@
 <br><br>
-<div  *ngIf="currentUser">
-  <h1 id="hello_user">Hello {{currentUser}}, are you hungry?</h1>
-</div>
+
 <section class="menu">
 
   <!-- It's likely you'll need to link the card somewhere. You could add a button in the info, link the titles, or even wrap the entire card in an <a href="..."> -->
-
+ <div class="row">
   <div class="product-card">
     <div class="product-image">
     <img src ="assets/r1.jpg">
@@ -13,9 +11,11 @@
     <div class="product-info">
       <h1>Restaurant MAGIC</h1>
       <h6>Descriere</h6>
-      <button mat-raised-button>Vezi restaurantul </button>
+      <button mat-raised-button routerLink="restaurants,{{restaurant}}">Vezi restaurantul </button>
     </div>
   </div>
+
+
   <br>
   <div class="product-card">
     <div class="product-image">
@@ -27,6 +27,32 @@
       <button mat-raised-button>Vezi restaurantul </button>
     </div>
   </div>
+ </div>
 
-  <!-- more products -->
+  <div class="row">
+    <div class="product-card">
+      <div class="product-image">
+        <img src ="assets/r2.jpg">
+      </div>
+      <div class="product-info">
+        <h1>Restaurant Apollo</h1>
+        <h6>Descriere</h6>
+        <button mat-raised-button>Vezi restaurantul </button>
+      </div>
+    </div>
+  <div class="product-card">
+    <div class="product-image">
+      <img src ="assets/r1.jpg">
+    </div>
+    <div class="product-info">
+      <h1>Restaurant MAGIC</h1>
+      <h6>Descriere</h6>
+      <button mat-raised-button>Vezi restaurantul </button>
+    </div>
+  </div>
 
+
+  <br>
+
+  </div>
+</section>

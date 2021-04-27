@@ -1,5 +1,15 @@
 
+.menu_right{
+  margin-right: 50px;
+  align-self: flex-end;
+  font-size: large;
+  text-align: right;
+}
+.menu_right button{
+  color: #2d1c1c;
 
+  font-size:15px !important;
+}
 .menu{
   margin: auto;
 
@@ -9,14 +19,6 @@
 
 }
 
-#login {
-  margin: auto;
-
-  align-self: flex-end;
-  font-size: large;
-  text-align: right;
-
-}
 
 #logout {
   margin: auto;
@@ -33,4 +35,20 @@ button{
   color: brown;
 
   font-size: xx-large;
+}
+mat-item{
+  color: darkred;
+}
+.menu_right button{
+  background-color: papayawhip;
+}
+
+
+.contact{
+  background-color: darkgray;
+  text-align: center;
+  border-top: 5px solid black;
+  margin-bottom: 0px;
+  padding: 10px;
+
 }

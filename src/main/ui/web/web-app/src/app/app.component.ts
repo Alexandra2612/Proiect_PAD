@@ -6,8 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Food Delivery';
-  currentUser= false;
-  notUser=true;
 
+  title = 'Food Delivery';
+  //static currentUser = "alina";
+  notUser =false;
+  currentUser: boolean =true;
+
+  logout_alert() {
+    this.currentUser=false;
+    this.notUser=true;
+  }
 }

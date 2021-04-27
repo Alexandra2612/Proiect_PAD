@@ -7,11 +7,13 @@ import {AppComponent} from "../app.component";
   styleUrls: ['./restaurants.component.css']
 })
 export class RestaurantsComponent implements OnInit {
+  restaurantid =1;
+  restaurant=4;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  @Input() currentUser: any;
+
 
 }
