@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "a01fbece-db72-4f19-815d-41fa56bfbcb5",
+		"name": "fooddelivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "add_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rol\":\"c\",\r\n    \"email\":\"ab@c.de\",\r\n    \"nickname\":\"abc\",\r\n    \"nume\":\"a\",\r\n    \"prenume\":\"b\",\r\n    \"adrese\":\"null\",\r\n    \"phoneNumber\":\"098333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_byid_1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "192.168.8.107:8080/api/user/1",
+							"host": [
+								"192",
+								"168",
+								"8",
+								"107"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_user_byid_16",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rol\":\"c\",\r\n    \"email\":\"abc@c.de\",\r\n    \"nickname\":\"abdc\",\r\n    \"nume\":\"a\",\r\n    \"prenume\":\"b\",\r\n    \"adrese\":\"abcd\",\r\n    \"phoneNumber\":\"098333222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.8.107:8080/api/user/16",
+							"host": [
+								"192",
+								"168",
+								"8",
+								"107"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user_byid_17",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "192.168.8.107:8080/api/user/17",
+							"host": [
+								"192",
+								"168",
+								"8",
+								"107"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_byemail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "192.168.8.107:8080/api/user/email?email=abcd@c.de",
+							"host": [
+								"192",
+								"168",
+								"8",
+								"107"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "abcd@c.de"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "192.168.8.107:8080/api/user",
+							"host": [
+								"192",
+								"168",
+								"8",
+								"107"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "get_restaurant_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/restaurant",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_restaurant_byid_1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/restaurant/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"restaurant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nume\":\"bb\",\r\n     \"imagine\":\"dd\",\r\n     \"adresa\":\"ff\",\r\n     \"descriere\":\"hh\",\r\n     \"meniu\":\"a,f,g,n\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/restaurant",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_restaurant_byid_19",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nume\":\"bb\",\r\n     \"imagine\":\"def\",\r\n     \"adresa\":\"fgf\",\r\n     \"descriere\":\"hiihjh\",\r\n     \"meniu\":\"a,f,g,n\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/restaurant/19",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"restaurant",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_restaurant_byid_22",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/restaurant/22",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"restaurant",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_restaurant_containing_name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/restaurant/nume?nume=a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"restaurant",
+								"nume"
+							],
+							"query": [
+								{
+									"key": "nume",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MenuItem",
+			"item": [
+				{
+					"name": "get_menuItem_byName_Pizza",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/menuItem/nume?nume=Pizza",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"menuItem",
+								"nume"
+							],
+							"query": [
+								{
+									"key": "nume",
+									"value": "Pizza"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_menuItem_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/menuItem",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"menuItem"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "get_order_byClientId_1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/order/clientId?clientId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"order",
+								"clientId"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_order_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/order",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_order_byRestaurantId_1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api//order/restaurantId?restaurantId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"",
+								"order",
+								"restaurantId"
+							],
+							"query": [
+								{
+									"key": "restaurantId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Topping",
+			"item": [
+				{
+					"name": "get_topping_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/topping",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"topping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_topping_byid_1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/topping/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"topping",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

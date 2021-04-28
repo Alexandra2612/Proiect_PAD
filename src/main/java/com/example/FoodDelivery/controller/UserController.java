@@ -53,7 +53,7 @@ public class UserController {
     public ResponseEntity<User> createUser(@RequestBody User user) {
         try {
             User _user = userRepository
-                    .save(new User(user.getRol(), user.getEmail(),user.getNickname(),user.getNume(),user.getPrenume(),user.getAdrese(),user.getPhoneNumber()));
+                    .save(new User(user.getRol(), user.getEmail(),user.getNickname(),user.getNume(),user.getPrenume(),user.getAdrese(),user.getPhoneNumber(),user.getParola()));
             return new ResponseEntity<>(_user, HttpStatus.CREATED);
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -73,6 +73,7 @@ public class UserController {
             _user.setNume(user.getNume());
             _user.setPrenume(user.getPrenume());
             _user.setAdrese(user.getAdrese());
+            _user.setParola(user.getParola());
             _user.setPhoneNumber(user.getPhoneNumber());
             return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
         } else {

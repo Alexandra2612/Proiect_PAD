@@ -1,0 +1,57 @@
+CREATE TABLE `user` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `rol` VARCHAR(1) NOT NULL,
+  `email` VARCHAR(70) NOT NULL,
+  `nickname` VARCHAR(70) NOT NULL,
+  `nume` VARCHAR(70) NOT NULL,
+  `prenume` VARCHAR(70) NOT NULL,
+  `adrese` VARCHAR(1000) NULL DEFAULT NULL,
+  `phone_number` VARCHAR(20) NULL DEFAULT NULL,
+  `parola` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`)
+)ENGINE=InnoDB;
+
+CREATE TABLE `restaurant`(
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nume` VARCHAR(70) NOT NULL,
+  `imagine` VARCHAR(70) NOT NULL,
+  `adresa` VARCHAR(200) NOT NULL,
+  `descriere` VARCHAR(1000) NOT NULL,
+  `meniu` VARCHAR(400) NOT NULL,
+  PRIMARY KEY (`id`)
+)ENGINE=InnoDB;
+
+CREATE TABLE `mancare` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nume` VARCHAR(100) NOT NULL,
+  `ingrediente` VARCHAR(200) NOT NULL,
+  `imagine` VARCHAR(70) NOT NULL,
+  `pret` DOUBLE NOT NULL,
+  `gramaj` INT NOT NULL,
+  `toppinguri` VARCHAR(150) NOT NULL,
+  PRIMARY KEY (`id`)
+)ENGINE=InnoDB;
+
+CREATE TABLE `topping` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nume` VARCHAR(100) NOT NULL,
+  `pret` DOUBLE NOT NULL,
+  `gramaj` INT NOT NULL,
+  PRIMARY KEY (`id`)
+)ENGINE=InnoDB;
+
+CREATE TABLE `comanda` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `clientId` INT NOT NULL,
+  `livratorId` INT NOT NULL,
+  `restaurantId` INT NOT NULL,
+  `continut` VARCHAR(400) NOT NULL,
+  `prettotal` DOUBLE NOT NULL,
+  `metodaplata` VARCHAR(1) NOT NULL,
+  `adresa` VARCHAR(400) NOT NULL,
+  `finished` INT NULL DEFAULT 0, 
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`clientId`) REFERENCES `user`(`id`),
+  FOREIGN KEY (`livratorId`) REFERENCES `user`(`id`),
+  FOREIGN KEY (`restaurantId`) REFERENCES `restaurant`(`id`)
+)ENGINE=InnoDB;
