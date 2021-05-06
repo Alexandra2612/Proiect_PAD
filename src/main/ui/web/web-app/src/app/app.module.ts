@@ -22,6 +22,7 @@ import {MatPaginatedTabHeader} from "@angular/material/tabs/paginated-tab-header
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CommonModule } from '@angular/common';
+import  {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -51,7 +52,9 @@ import { CommonModule } from '@angular/common';
     MatTableModule,
     MatPaginatorModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+
 
 
   ],

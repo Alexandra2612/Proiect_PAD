@@ -18,7 +18,7 @@ const  routes:  Routes  = [
   },
 
   {
-    path: 'restaurants',
+    path: 'restaurant',
     component:RestaurantsComponent
   },
   {
@@ -26,7 +26,7 @@ const  routes:  Routes  = [
     component: RegisterComponent
   },
   {
-    path: 'restaurants/:id', component: RestaurantMenuComponent
+    path: 'restaurant/:id', component: RestaurantMenuComponent
   },
   {
     path: 'chart', component : ChartComponent
