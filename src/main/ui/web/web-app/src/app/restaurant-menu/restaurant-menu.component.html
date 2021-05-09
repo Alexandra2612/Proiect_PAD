@@ -1,39 +1,16 @@
 <br>
 <div id="presentation">
-  <h1>Aici e numele restaurantului</h1>
-  <p>Aici e prezentarea restaurantului</p>
+  <h1>{{r.nume}}</h1>
+  <p>{{r.descriere}}</p>
 </div>
-<div class="box">
-    <img src="assets/m1.jpg" alt="Imagine">
+<div class="box" *ngFor="let item of menulist">
+    <img src="assets/{{item.imagine}}" alt="Imagine">
     <div class="content">
-      <div>Descriere</div>
+      <h1>{{item.nume}}</h1>
+      <div>{{item.ingrediente}}</div>
+      <div>{{item.toppinguri}}</div>
       <div class="add_button">
         <button mat-button>Adauga in cos</button>
       </div>
     </div>
-</div>
-<div class="box">
-  <img src="assets/m2.jpg" alt="Imagine">
-  <div class="content">
-    <div>Descriere produs 2 gvfrdctetfyvubn tygb hygftv uyv y hgy f  gf
-      `toppinguri` VARCHAR(150) NOT NULL,
-      PRIMARY KEY (`id`)
-      )ENGINE=InnoDB;
-
-      CREATE TABLE `topping` (
-      `id` INT(11) NOT NULL AUTO_INCREMENT,
-      `nume` VARCHAR(100) NOT NULL,
-      `pret` DOUBLE NOT NULL,
-      `gramaj` INT(11) NOT NULL,
-      PRIMARY KEY (`id`)
-      )ENGINE=InnoDB;
-
-      CREATE TABLE `comanda` (
-      `id` INT(11) NOT NULL AUTO_INCREMENT,
-      `clientId` INT(11) NOT NULL,
-     </div>
-    <div class="add_button">
-      <button mat-button>Adauga in cos</button>
-    </div>
-  </div>
 </div>
