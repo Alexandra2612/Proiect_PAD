@@ -22,10 +22,10 @@
 
 }
 img{
-  height: 200px;
-  border-radius: 10px;
-  text-align: center;
-
+  width:  800px;
+  height: 400px;
+  background-size: cover;
+  object-fit:scale-down;
 }
 
 .product-info{
