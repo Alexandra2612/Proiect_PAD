@@ -1,3 +1,5 @@
+import {Topping} from "./Topping";
+
 export interface Mancare {
   id: number;
   nume: string;
@@ -5,5 +7,5 @@ export interface Mancare {
   imagine: string;
   pret: number;
   gramaj: number;
-  toppinguri: string;
+  toppinguri: Array<Topping>;
 }

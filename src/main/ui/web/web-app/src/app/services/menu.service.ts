@@ -4,10 +4,10 @@ import {RestaurantsService} from "./restaurants.service";
 import {Observable} from "rxjs";
 import {Restaurant} from "../models/restaurant";
 import {tap} from "rxjs/operators";
+import {Mancare} from "../models/Mancare";
 
 
-class Mancare {
-}
+
 
 @Injectable({
   providedIn: 'root'
@@ -25,9 +25,9 @@ export class MenuService {
   getMancareById(arrayElement: string) : Observable<Mancare>{
 
 
-    console.log(arrayElement);
+    //console.log(arrayElement);
     let a = this.http.get<Mancare>(`${this.mancareurl}/${arrayElement}`);
-    console.log(a);
+    //console.log(a);
     return a;
 
   }
