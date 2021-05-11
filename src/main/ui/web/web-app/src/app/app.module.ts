@@ -16,13 +16,17 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import { RestaurantMenuComponent } from './restaurant-menu/restaurant-menu.component';
-import {ChartComponent} from "./chart/chart.component";
+
 import {MatCell, MatCellDef, MatHeaderCell, MatTableModule} from "@angular/material/table";
 import {MatPaginatedTabHeader} from "@angular/material/tabs/paginated-tab-header";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CommonModule } from '@angular/common';
 import  {HttpClientModule} from "@angular/common/http";
+import { CartComponent } from './cart/cart.component';
+import {MatRadioButton, MatRadioModule} from "@angular/material/radio";
+import { MenuItemComponent } from './menu-item/menu-item.component';
+import {CookieService} from "ngx-cookie-service";
 
 @NgModule({
   declarations: [
@@ -32,8 +36,10 @@ import  {HttpClientModule} from "@angular/common/http";
     HomeComponent,
     RestaurantsComponent,
     RestaurantMenuComponent,
-    ChartComponent,
+
     PageNotFoundComponent,
+    CartComponent,
+    MenuItemComponent,
 
   ],
   imports: [
@@ -54,11 +60,12 @@ import  {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     CommonModule,
     HttpClientModule,
+    MatRadioModule
 
 
 
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   exports: [
     FormsModule,

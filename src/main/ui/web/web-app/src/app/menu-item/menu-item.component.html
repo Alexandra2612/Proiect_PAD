@@ -1,0 +1,20 @@
+
+
+<div *ngIf="item1">
+  <img src="assets/{{item1.imagine}}" alt="Imagine">
+  <div class="content">
+    <h1>{{item1.nume}}</h1>
+    <div>{{item1.ingrediente}}</div>
+    <h2>{{item1.pret}} lei</h2>
+    <mat-radio-group
+      [(ngModel)]="toppingchoose">
+      <mat-radio-button class="example-radio-button" *ngFor="let top of item1.toppinguri" [value]="top">
+        {{top.nume }}
+      </mat-radio-button>
+    </mat-radio-group>
+    <div class="add_button">
+      <button mat-button (click)="addItemInCart(item1)">Adauga in cos</button>
+    </div>
+  </div>
+</div>
+
