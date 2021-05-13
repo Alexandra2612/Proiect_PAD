@@ -62,8 +62,6 @@ import {CookieService} from "ngx-cookie-service";
     HttpClientModule,
     MatRadioModule
 
-
-
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],

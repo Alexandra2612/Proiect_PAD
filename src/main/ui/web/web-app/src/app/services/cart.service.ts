@@ -1,37 +1,62 @@
 import { Injectable } from '@angular/core';
 import {MancareComanda} from "../models/MancareComanda";
-import {CookieService}  from "ngx-cookie-service"
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  cartProductList = [];
+  public cartProductList: any;
 
 
- constructor(private cookieService:CookieService){
-   //this.cartProductList=JSON.parse(this.cookieService.get('cookie-name'))
+ constructor(){
+
  }
   public addProductToCart(product: MancareComanda) {
-    // const productExistInCart = this.cartProductList.find(({name}) => name === product.nume); // find product by name
-    // if (!productExistInCart) {
-    // @ts-ignore
-    // @ts-ignore
-    //this.cartProductList=JSON.parse(this.cookieService.get('cookie-name'));
 
-    this.cartProductList.push(product); // enhance "porduct" opject with "num" property
-   // this.cookieService.set('cookie-name',JSON.stringify(this.cartProductList));
-    //return;
-    console.log(this.cartProductList)
+    this.cartProductList=JSON.parse(<string>localStorage.getItem('cookiename'))
+    if(this.cartProductList==null)
+      this.cartProductList=[];
+
+    var ok=0;
+    for( var i = 0; i < this.cartProductList.length; i++){
+
+      if ( this.cartProductList[i].product.nume == product.nume ) {
+        if(this.cartProductList[i].product.toppinguri)
+          if(this.cartProductList[i].product.toppinguri.nume===product.toppinguri.nume)
+          {   this.cartProductList[i].num+=1; ok=1;}
+
+          else;
+        else
+        {this.cartProductList[i].num+=1; ok=1;}
+      }
+    }
+    if(ok==0)  this.cartProductList.push({product: product, num: 1});
+
+      localStorage.setItem('cookiename',JSON.stringify(this.cartProductList));
+      console.log(this.cartProductList)
   }
-  // productExistInCart.num += 1;
+  removeProduct(product:MancareComanda) {
+    this.cartProductList=JSON.parse(<string>localStorage.getItem('cookiename'))
 
-  removeProduct(product: { name: any; }) {
-    this.cartProductList = this.cartProductList.filter(({name}) => name !== product.name)
-  }
+    for( var i = 0; i < this.cartProductList.length; i++){
 
+      if ( this.cartProductList[i].product.nume == product.nume ) {
+        if(this.cartProductList[i].product.toppinguri)
+          if(this.cartProductList[i].product.toppinguri.nume===product.toppinguri.nume)
+            this.cartProductList.splice(i, 1);
+          else;
+          else
+          this.cartProductList.splice(i, 1);
+      }
+      console.log(this.cartProductList);
+      console.log(product);
+
+    }
+    localStorage.setItem('cookiename',JSON.stringify(this.cartProductList));
+ }
   getProductList() {
-    //this.cartProductList=JSON.parse(this.cookieService.get('cookie-name'))
+    this.cartProductList=JSON.parse(<string>localStorage.getItem('cookiename'));
     console.log(this.cartProductList)
     return this.cartProductList;
   }

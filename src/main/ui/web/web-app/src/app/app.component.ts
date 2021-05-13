@@ -12,7 +12,7 @@ export class AppComponent {
 
   title = 'Food Delivery';
   //static currentUser = "alina";
-  notUser =false;
-  currentUser: boolean =true;
+  currentUser: boolean =false;
+  notUser: any=true;
 
 }

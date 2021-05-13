@@ -96,5 +96,7 @@ export class RestaurantMenuComponent implements  OnInit {
     this.itemchoose.toppinguri=this.toppingchoose
     console.log(item);
   }
-
+getRestaurant(){
+    return this.r;
+}
 }

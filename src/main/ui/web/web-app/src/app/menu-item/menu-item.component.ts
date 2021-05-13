@@ -5,6 +5,7 @@ import {MancareComanda} from "../models/MancareComanda";
 import {isNumeric} from "rxjs/internal-compatibility";
 import {AppComponent} from "../app.component";
 import {CartService} from "../services/cart.service";
+import {RestaurantMenuComponent} from "../restaurant-menu/restaurant-menu.component";
 
 
 @Component({
@@ -18,7 +19,7 @@ export class MenuItemComponent implements OnInit{
 
 
 
-  constructor(private a:CartService) { }
+  constructor(private a:CartService, private b:RestaurantMenuComponent) { }
   @Input()  item1: any;
   toppingchoose: any;
 
@@ -34,6 +35,7 @@ export class MenuItemComponent implements OnInit{
     this.itemchoose=({
       id: item.id,
       nume: item.nume,
+      nume_restaurant: this.b.getRestaurant(),
       ingrediente: item.ingrediente,
       imagine:item.imagine,
       pret:item.pret,
