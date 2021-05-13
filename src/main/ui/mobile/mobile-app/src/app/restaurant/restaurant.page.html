@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <img src="../../assets/menu_bar.svg"/>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>Food! <ion-icon name="fast-food-outline"></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <section class="menu" *ngFor ="let rest of restaurants">
+
+    <!-- It's likely you'll need to link the card somewhere. You could add a button in the info, link the titles, or even wrap the entire card in an <a href="..."> -->
+    <div class="row">
+
+      <div class="product-card" >
+        <div class="product-image">
+          <img src ="assets/{{rest.imagine}}">
+        </div>
+        <div class="product-info">
+          <h1>{{rest.nume}}</h1>
+          <h6>{{rest.descriere}}</h6>
+          <ion-button  routerLink="/restaurant/{{rest.id}}">Vezi Meniu </ion-button>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+</ion-content>
