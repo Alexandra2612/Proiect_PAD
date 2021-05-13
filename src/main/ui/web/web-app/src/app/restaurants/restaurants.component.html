@@ -1,9 +1,9 @@
 <br><br>
 
-<section class="menu" *ngFor ="let rest of restaurants">
+<section class="menu" *ngFor ="let rest of restaurants;">
 
   <!-- It's likely you'll need to link the card somewhere. You could add a button in the info, link the titles, or even wrap the entire card in an <a href="..."> -->
- <ion-col>
+ <div class="row">
 
   <div class="product-card" >
     <div class="product-image">
@@ -12,10 +12,10 @@
     <div class="product-info">
       <h1>{{rest.nume}}</h1>
       <h6>{{rest.descriere}}</h6>
-      <ion-button  routerLink="/restaurant/{{rest.id}}">Vezi restaurantul </ion-button>
+      <button mat-raised-button routerLink="/restaurant/{{rest.id}}">Vezi restaurantul </button>
     </div>
   </div>
 
-
- </ion-col>
+ </div>
 </section>
+

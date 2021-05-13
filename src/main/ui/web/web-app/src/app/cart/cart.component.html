@@ -1,0 +1,22 @@
+
+<div *ngIf="cartProductList" class="orderbox" >
+  <div class="row"  *ngFor="let item of cartProductList">
+      <div class="product-info">
+        <img class="product-image" src ="assets/{{item.product.imagine}}">
+        <h1>{{item.product.nume}}</h1>
+        <h3 *ngIf="item.product.toppinguri && item.product.toppinguri!=''" >-{{item.product.toppinguri.nume}}</h3>
+        <h2 class="bucati">{{item.num}}</h2>
+        <h1 class="pret">{{item.product.pret}} lei</h1>
+        <div class="buttondelete"><button (click)="remove(item.product)"><mat-icon>delete</mat-icon></button>
+      </div>
+<br>
+  </div>
+</div>
+</div>
+
+
+<div id="cart-status">
+  <h1>TOTAL: {{getTotal()}} lei</h1>
+  <button mat-raised-button>Trimite Comanda</button>
+</div>
+

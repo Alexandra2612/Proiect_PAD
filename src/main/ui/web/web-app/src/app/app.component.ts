@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {MancareComanda} from "./models/MancareComanda";
+
+
 
 @Component({
   selector: 'app-root',
@@ -9,11 +12,7 @@ export class AppComponent {
 
   title = 'Food Delivery';
   //static currentUser = "alina";
-  notUser =false;
-  currentUser: boolean =true;
+  currentUser: boolean =false;
+  notUser: any=true;
 
-  logout_alert() {
-    this.currentUser=false;
-    this.notUser=true;
-  }
 }
