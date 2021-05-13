@@ -1,12 +1,12 @@
 
-<mat-card>
+<mat-card *ngIf="loggeduser==undefined">
   <mat-card-content>
     <div class="container">
       <div class="logo">Login</div>
       <pre></pre>
       <br>
       <div class="login-item">
-        <form [formGroup]="profileForm"  (ngSubmit)="onSubmit()" class="form form-register">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="form form-register">
 
           <pre></pre>
           <div class="form-field">
@@ -29,6 +29,9 @@
           <div class="form-field">
             <button mat-raised-button color="warm">Login</button>
           </div>
+          <div style="color: #751124" *ngIf="fail ">
+            Username sau parola incorecta!
+          </div>
           <div style="color: #751124" *ngIf=valid >
             Introdu username si parola!
           </div>
@@ -39,5 +42,10 @@
     <pre></pre>
     <p style="color: red;">You don't have an account?</p>
     <a routerLink="/register" style="color: crimson;"> Register</a>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="loggeduser">
+  <mat-card-content>
+    {{loggeduser.nume}} {{loggeduser.prenume}}, bine ai venit!
   </mat-card-content>
 </mat-card>

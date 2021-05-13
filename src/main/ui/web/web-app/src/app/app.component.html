@@ -1,17 +1,17 @@
 <a id="logo" routerLink="/" routerLinkActive="active" ><img style=" width: 90px"  src="../../assets/a.png"></a>
-<div class="menu_right" *ngIf="notUser">
+<div class="menu_right" *ngIf="loggeduser==undefined">
   <button mat-button   class="shopping_cart" routerLink="/cart"> <mat-icon>shopping_cart</mat-icon>Cart</button>
   <button mat-button routerLinkActive="active"  routerLink="/login" ><mat-icon >account_box</mat-icon> Login</button>
 </div>
 
-<div class="menu_right" *ngIf="currentUser">
+<div class="menu_right" *ngIf="loggeduser">
   <button mat-button [matMenuTriggerFor]="menu"><mat-icon>account_box</mat-icon>My_account</button>
   <mat-menu style="font-size: 20px"#menu="matMenu">
     <button mat-menu-item>About me</button>
     <button mat-menu-item>Orders</button>
   </mat-menu>
   <button mat-button class="shopping_cart" routerLinkActive="active"  routerLink="/cart"><mat-icon>shopping_cart</mat-icon>Cart</button>
-  <button mat-button style="color: black" >Logout</button>
+  <button mat-button style="color: black" (click)="logout()" >Logout</button>
 </div>
 
 <div class="menu" >
