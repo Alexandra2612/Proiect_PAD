@@ -36,7 +36,6 @@ import {CookieService} from "ngx-cookie-service";
     HomeComponent,
     RestaurantsComponent,
     RestaurantMenuComponent,
-
     PageNotFoundComponent,
     CartComponent,
     MenuItemComponent,
@@ -63,7 +62,7 @@ import {CookieService} from "ngx-cookie-service";
     MatRadioModule
 
   ],
-  providers: [CookieService],
+  providers: [],
   bootstrap: [AppComponent],
   exports: [
     FormsModule,

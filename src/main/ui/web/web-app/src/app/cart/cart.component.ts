@@ -3,6 +3,7 @@ import {AppComponent} from "../app.component";
 import {CartService} from "../services/cart.service";
 import {CookieService} from "ngx-cookie-service";
 import { MancareComanda } from '../models/MancareComanda';
+import {LoginService} from "../services/login.service";
 
 
 @Component({
@@ -15,7 +16,7 @@ export class CartComponent implements OnInit {
   cartProductList: any;
   newNumber: any;
 
-  constructor(private cartService: CartService) {
+  constructor(private cartService: CartService, private loginService:LoginService) {
   }
 
   ngOnInit(): void {
@@ -37,4 +38,8 @@ export class CartComponent implements OnInit {
     return total;
 
 }
+
+  send() {
+
+  }
 }

@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Restaurant} from "../models/restaurant";
 import {User} from "../models/User";
+import sha256, { Hash, HMAC } from "fast-sha256";
 
 @Injectable({
   providedIn: 'root'
@@ -24,8 +25,8 @@ export class LoginService {
 
   }
   get loggedUser(): User | undefined{
-    this._loggedUser=JSON.parse(<string>localStorage.getItem('logeedUser'));
 
+    this._loggedUser=JSON.parse(<string>localStorage.getItem('logeedUser'));
     console.log(this._loggedUser)
     return this._loggedUser;
   }

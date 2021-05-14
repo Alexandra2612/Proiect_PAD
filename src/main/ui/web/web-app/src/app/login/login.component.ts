@@ -4,6 +4,7 @@ import { FormGroup} from '@angular/forms';
 import { Validators } from '@angular/forms';
 import {LoginService} from "../services/login.service";
 import {User} from "../models/User";
+import sha256 from "fast-sha256";
 
 
 @Component({
@@ -55,14 +56,22 @@ export class LoginComponent implements OnInit {
             });
           }
           this.ok = false;
-          this.loginService.addLoggedUser(this.logged[0]);
+
+          let b=sha256(new TextEncoder().encode(this.profileForm.controls.password.value));
+          let str="";
+          b.forEach(ch=>{str=str+("0123456789abcdef"[Math.floor(ch/16)%16]);str=str+("0123456789abcdef"[ch%16]);});
+          console.log(str);
+          console.log()
+          if(str==this.logged[0].parola)
+            this.loginService.addLoggedUser(this.logged[0]);
+
         }
       }, err => {
         console.log("Nu s-a gasit" + err);
         this.fail = true;
       }
     );
-    console.log(this.logged);
+
 
 
   }
