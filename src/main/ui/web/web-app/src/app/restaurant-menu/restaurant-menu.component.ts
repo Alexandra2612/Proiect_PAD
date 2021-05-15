@@ -30,7 +30,6 @@ export class RestaurantMenuComponent implements  OnInit {
   private itemchoose: any;
 
   constructor(private activatedRoute: ActivatedRoute, private menuService: MenuService, private toppingService: ToppingService) {
-
   }
 
   ngOnInit(): void {
@@ -69,21 +68,15 @@ export class RestaurantMenuComponent implements  OnInit {
           );
         }
         console.log(this.topping[i]);
-
-
         data.toppinguri = this.topping[i];
         this.menulist.push(data);
 
-
-
       })
       console.log(this.menulist);
-   this.getMenuList();
+      this.getMenuList();
     }
 
   }
-
-
 
 
   getMenuList(){
@@ -96,7 +89,7 @@ export class RestaurantMenuComponent implements  OnInit {
     this.itemchoose.toppinguri=this.toppingchoose
     console.log(item);
   }
-getRestaurant(){
-    return this.r;
-}
+  getRestaurant(){
+      return this.r;
+  }
 }

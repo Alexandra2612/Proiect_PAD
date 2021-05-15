@@ -1,36 +1,58 @@
-<mat-card tabindex="-1">
+
+<mat-card>
   <mat-card-content>
     <div class="container">
-      <div class="logo">Create a new account!</div>
-      <div class="register-item">
-        <form #myform="ngForm" (ngSubmit)="register(myform)" class="form form-register">
+      <div class="logo">Register</div>
+      <pre></pre>
+      <br>
+      <div class="login-item">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form form-register">
+
           <pre></pre>
           <div class="form-field">
-            <label class="user" for="register-username"><span class="hidden">Name</span></label>
+            <label class="user" ><span class="hidden">Name</span></label>
             <pre></pre>
-            <input name="name" id="register-username" type="email" class="form-input" placeholder="Name" ngModel required>
+            <input   type="text" formControlName="nume" required placeholder= "Name"  >
+
+
           </div>
           <pre></pre>
           <div class="form-field">
-            <label class="user" for="register-email"><span class="hidden">Email</span></label>
+            <label class="user" ><span class="hidden">Username</span></label>
             <pre></pre>
-            <input name="email" id="register-email" type="email" class="form-input" placeholder="Email" ngModel required>
-          </div>
-          <pre></pre>
-          <div class="form-field">
-            <label class="lock" for="register-password"><span class="hidden">Password</span></label>
-            <pre></pre>
-            <input name="password" id="register-password" type="password" class="form-input" placeholder="Password" ngModel required>
-          </div>
-          <pre></pre>
-          <div class="form-field">
-            <button mat-raised-button color='warm'>Register</button>
+            <input   type="text" formControlName="username" required placeholder= "Username"  >
+
           </div>
 
+
+          <pre></pre>
+          <div class="form-field">
+            <label class="lock" ><span class="hidden">Password</span></label>
+            <pre></pre>
+            <input  required  formControlName="password"  type="password" placeholder="Password" >
+          </div>
+          <pre></pre>
+          <br>
+
+          <div class="form-field">
+            <button mat-raised-button color="warm">Register</button>
+          </div>
+          <div style="color: #148825" *ngIf="succes">
+            User inregistrat
+          </div>
+          <div style="color: #751124" *ngIf="usernameExists">
+            Username existent
+          </div>
+          <div style="color: #751124" *ngIf="!valid" >
+            Introdu toate datele necesare
+          </div>
         </form>
+
       </div>
     </div>
     <pre></pre>
-    <a routerLink="/login" style="color: blue;"> Back to login</a>
+    <p style="color: red;">You have an account?</p>
+    <a routerLink="/login" style="color: crimson;"> Login</a>
   </mat-card-content>
 </mat-card>
+

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RestaurantsService} from "../services/restaurants.service";
-
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-restaurants',
@@ -13,11 +13,13 @@ export class RestaurantsComponent implements OnInit {
  public restaurants: any= [];
 
 
-  constructor(private restaurantsService: RestaurantsService) {
+  constructor(private restaurantsService: RestaurantsService, private router:Router) {
+
   }
   id=1;
 
   ngOnInit(): void {
+
 
     this.restaurantsService.getAll()
       .subscribe(data => {
@@ -39,4 +41,11 @@ export class RestaurantsComponent implements OnInit {
 
   }
 
+  Click(id:string) {
+
+    this.router.navigateByUrl("/restaurant/"+id);
+    //location.reload()
+    //routerLink="/restaurant/{{rest.id}}"
+
+  }
 }
