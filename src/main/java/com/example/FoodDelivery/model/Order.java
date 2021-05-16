@@ -9,14 +9,14 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "clientid")
-    private long clientId;
+    @Column(name = "client")
+    private String client;
 
-    @Column(name = "livratorid")
-    private long livratorId;
+    @Column(name = "livrator")
+    private String livrator;
 
-    @Column(name = "restaurantid")
-    private long restaurantId;
+    @Column(name = "restaurant")
+    private String restaurant;
 
     @Column(name = "continut")
     private String continut;
@@ -37,10 +37,10 @@ public class Order {
 
     }
 
-    public Order(long clientId, long livratorId, long restaurantId, String continut, int prettotal, char metodaplata, String adresa) {
-        this.clientId = clientId;
-        this.livratorId = livratorId;
-        this.restaurantId = restaurantId;
+    public Order(String client, String livrator, String restaurant, String continut, int prettotal, char metodaplata, String adresa) {
+        this.client = client;
+        this.livrator = livrator;
+        this.restaurant = restaurant;
         this.continut = continut;
         this.prettotal = prettotal;
         this.metodaplata = metodaplata;
@@ -48,28 +48,28 @@ public class Order {
         this.finished = 0;
     }
 
-    public long getClientId() {
-        return clientId;
+    public String getClient() {
+        return client;
     }
 
-    public void setClientId(long clientId) {
-        this.clientId = clientId;
+    public void setClient(String client) {
+        this.client = client;
     }
 
-    public long getLivratorId() {
-        return livratorId;
+    public String getLivrator() {
+        return livrator;
     }
 
-    public void setLivratorId(long livratorId) {
-        this.livratorId = livratorId;
+    public void setLivrator(String livrator) {
+        this.livrator = livrator;
     }
 
-    public long getRestaurantId() {
-        return restaurantId;
+    public String getRestaurant() {
+        return restaurant;
     }
 
-    public void setRestaurantId(long restaurantId) {
-        this.restaurantId = restaurantId;
+    public void setRestaurant(String restaurant) {
+        this.restaurant = restaurant;
     }
 
     public String getContinut() {
@@ -116,9 +116,9 @@ public class Order {
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", clientId=" + clientId +
-                ", livratorId=" + livratorId +
-                ", restaurantId=" + restaurantId +
+                ", client=" + client +
+                ", livrator=" + livrator +
+                ", restaurant=" + restaurant +
                 ", finished=" + finished +
                 ", continut='" + continut + '\'' +
                 ", prettotal=" + prettotal +
