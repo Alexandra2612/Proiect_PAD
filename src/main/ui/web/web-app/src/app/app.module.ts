@@ -27,6 +27,7 @@ import { CartComponent } from './cart/cart.component';
 import {MatRadioButton, MatRadioModule} from "@angular/material/radio";
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import {CookieService} from "ngx-cookie-service";
+import { OrderformComponent } from './orderform/orderform.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {CookieService} from "ngx-cookie-service";
     PageNotFoundComponent,
     CartComponent,
     MenuItemComponent,
+    OrderformComponent,
 
   ],
   imports: [

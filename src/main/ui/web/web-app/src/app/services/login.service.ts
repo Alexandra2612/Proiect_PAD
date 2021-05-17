@@ -21,12 +21,12 @@ export class LoginService {
 
   addLoggedUser(loggedElement: any) {
     this._loggedUser=loggedElement;
-    localStorage.setItem('logeedUser',JSON.stringify(this._loggedUser));
+    localStorage.setItem('loggedUser',JSON.stringify(this._loggedUser));
 
   }
   get loggedUser(): User | undefined{
 
-    this._loggedUser=JSON.parse(<string>localStorage.getItem('logeedUser'));
+    this._loggedUser=JSON.parse(<string>localStorage.getItem('loggedUser'));
     console.log(this._loggedUser)
     return this._loggedUser;
   }

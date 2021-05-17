@@ -17,6 +17,19 @@
 
 <div id="cart-status">
   <h1>TOTAL: {{getTotal()}} lei</h1>
-  <button mat-raised-button (click)="send()">Trimite Comanda</button>
+
+  <div *ngIf="!isLogged">
+    <h2 matDialogTitle>Trebuie sa ai un cont pentru a pune o comanda</h2>
+    <a routerLink="/login" style="font-size: 30px; color: #2814dc;"> Login</a>
+    <br><br>
+    <a routerLink="/register" style="color: #dc141b;">Register</a>
+  </div>
 </div>
+
+<div *ngIf="isLogged">
+  <app-orderform [orderList]="cartProductList"
+  [total]="getTotal()"></app-orderform>
+  </div>
+<br><br>
+
 

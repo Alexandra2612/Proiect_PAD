@@ -1,8 +1,7 @@
 import {User} from "./User";
 
 export class NormalUser implements User{
-  constructor(
-    public adrese: string,
+  constructor(public adrese: string,
   public email: string,
   public nickname: string,
   public nume: string,
