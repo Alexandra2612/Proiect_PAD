@@ -1,0 +1,22 @@
+
+
+<ion-card-content  *ngIf="item1">
+  <img src="assets/{{item1.imagine}}" alt="Imagine">
+
+  <h1>{{item1.nume}}</h1>
+  <div>{{item1.ingrediente}}</div>
+  <h2>{{item1.pret}} lei</h2>
+  <ion-list>
+  <ion-radio-group [(ngModel)]="toppingchoose">
+    <ion-item *ngFor="let top of item1.toppinguri" value="top">
+      <ion-label>{{top.nume }}</ion-label>
+    <ion-radio class="example-radio-button" ></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  </ion-list>
+  <div class="add_button">
+    <ion-button  (click)="addItemInCart(item1)">Adauga in cos</ion-button>
+  </div>
+
+</ion-card-content>
+

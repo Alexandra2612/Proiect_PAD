@@ -8,26 +8,49 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <div class="ion-padding container">
-    <h1>Login</h1>
+<ion-content class="ion-padding" *ngIf="loggeduser==undefined">
+  <ion-content >
+    <div class="container" class="ion-padding container">
+      <h1>Login</h1>
 
-    <div class="form-container">
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password"></ion-input>
-        <ion-icon name="eye" slot="end"></ion-icon>
-      </ion-item>
+      <div class="form-container">
+        <div [formGroup]="profileForm" (ngSubmit)="onSubmit()" >
+          <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input   type="text" formControlName="username" required placeholder= "Username"></ion-input>
+          </ion-item>
 
-      <ion-button expand="block" class="main-button" (click)="login()">Log in</ion-button>
 
-      <div class="sign-up">
-        Don't have an account? <ion-button color="dark" fill="clear" routerLink="/signup" routerDirection="forward">Sign up</ion-button>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input   type="password" formControlName="password" required placeholder= "Password"></ion-input>
+
+          </ion-item>
+
+          <ion-button expand="block" class="main-button" (click)="onSubmit()">Log in</ion-button>
+
+          <div style="color: #751124" *ngIf="fail ">
+            Username sau parola incorecta!
+          </div>
+
+          <div style="color: #751124" *ngIf=valid >
+            Introdu username si parola!
+          </div>
+
+        </div>
       </div>
+
     </div>
-  </div>
+  </ion-content>
+
+  <ion-card-content>
+    <pre></pre>
+    <p style="color: red;">You don't have an account?</p>
+    <a routerLink="/register" style="color: crimson;"> Register</a>
+  </ion-card-content>
 </ion-content>
+<mat-card *ngIf="loggeduser">
+  <mat-card-content>
+    {{loggeduser.nume}} {{loggeduser.prenume}}, bine ai venit!
+  </mat-card-content>
+</mat-card>

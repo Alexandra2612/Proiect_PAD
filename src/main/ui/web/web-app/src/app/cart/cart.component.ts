@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AppComponent} from "../app.component";
 import {CartService} from "../services/cart.service";
-import {CookieService} from "ngx-cookie-service";
 import { MancareComanda } from '../models/MancareComanda';
 import {LoginService} from "../services/login.service";
 

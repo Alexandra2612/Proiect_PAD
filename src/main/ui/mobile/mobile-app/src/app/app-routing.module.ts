@@ -11,17 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'restaurants',
-    loadChildren: () => import('./restaurant/restaurant.module').then( m => m.RestaurantPageModule)
-  },
+
   {
     path: 'restaurant',
     loadChildren: () => import('./restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+  },
+  {
+    path: 'restaurant/:id',
+    loadChildren: () => import('./restaurant-menu/restaurant-menu.module').then(m => m.RestaurantMenuPageModule)
   },
   {
     path: 'cart',
@@ -35,14 +32,15 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
-  {
-    path: 'restaurant-menu',
-    loadChildren: () => import('./restaurant-menu/restaurant-menu.module').then( m => m.RestaurantMenuPageModule)
-  },
+
   {
     path: 'wellcome',
     loadChildren: () => import('./wellcome/wellcome.module').then( m => m.WellcomePageModule)
   },
+
+
+
+
 ];
 
 @NgModule({
