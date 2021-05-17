@@ -21,17 +21,17 @@ public class OrderController {
     OrderRepository orderRepository;
 
     @GetMapping("/order")
-    public ResponseEntity<List<Order>> getAllOrders(@RequestParam(required = false) Long clientId, @RequestParam(required = false) Long livratorId, @RequestParam(required = false) Long restaurantId) {
+    public ResponseEntity<List<Order>> getAllOrders(@RequestParam(required = false) String client, @RequestParam(required = false) String livrator, @RequestParam(required = false) String restaurant) {
         try {
             List<Order> orders = new ArrayList<Order>();
-            if(clientId==null && livratorId==null && restaurantId==null)
+            if(client==null && livrator==null && restaurant==null)
                 orderRepository.findAll().forEach(orders::add);
-            else if(clientId!=null)
-                orderRepository.findByClientId(clientId).forEach(orders::add);
-            else if(livratorId!=null)
-                orderRepository.findByLivratorId(livratorId).forEach(orders::add);
-            else if(restaurantId!=null)
-                orderRepository.findByRestaurantId(restaurantId).forEach(orders::add);
+            else if(client!=null)
+                orderRepository.findByClient(client).forEach(orders::add);
+            else if(livrator!=null)
+                orderRepository.findByLivrator(livrator).forEach(orders::add);
+            else if(restaurant!=null)
+                orderRepository.findByRestaurant(restaurant).forEach(orders::add);
 
             if (orders.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -58,7 +58,7 @@ public class OrderController {
     public ResponseEntity<Order> createOrder(@RequestBody Order order) {
         try {
             Order _order = orderRepository
-                    .save(new Order(order.getClientId(),order.getLivratorId(),order.getRestaurantId(),order.getContinut(),order.getPrettotal(),order.getMetodaplata(),order.getAdresa()));
+                    .save(new Order(order.getClient(),order.getLivrator(),order.getRestaurant(),order.getContinut(),order.getPrettotal(),order.getMetodaplata(),order.getAdresa()));
             return new ResponseEntity<>(_order, HttpStatus.CREATED);
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -72,9 +72,9 @@ public class OrderController {
 
         if (orderData.isPresent()) {
             Order _order = orderData.get();
-            _order.setClientId(order.getClientId());
-            _order.setLivratorId(order.getLivratorId());
-            _order.setRestaurantId(order.getRestaurantId());
+            _order.setClient(order.getClient());
+            _order.setLivrator(order.getLivrator());
+            _order.setRestaurant(order.getRestaurant());
             _order.setContinut(order.getContinut());
             _order.setPrettotal(order.getPrettotal());
             _order.setMetodaplata(order.getMetodaplata());
@@ -96,10 +96,10 @@ public class OrderController {
         }
     }
 
-    @GetMapping("/order/clientId")
-    public ResponseEntity<List<Order>> findByClientId(long clientId) {
+    @GetMapping("/order/client")
+    public ResponseEntity<List<Order>> findByClient(String client) {
         try {
-            List<Order> orders = orderRepository.findByClientId(clientId);
+            List<Order> orders = orderRepository.findByClient(client);
 
             if (orders.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -110,10 +110,10 @@ public class OrderController {
         }
     }
 
-    @GetMapping("/order/restaurantId")
-    public ResponseEntity<List<Order>> findByRestaurantId(long restaurantId) {
+    @GetMapping("/order/restaurant")
+    public ResponseEntity<List<Order>> findByRestaurant(String restaurant) {
         try {
-            List<Order> orders = orderRepository.findByRestaurantId(restaurantId);
+            List<Order> orders = orderRepository.findByRestaurant(restaurant);
 
             if (orders.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -123,10 +123,10 @@ public class OrderController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    @GetMapping("/order/livratorId")
-    public ResponseEntity<List<Order>> findByLivratorId(long livratorId) {
+    @GetMapping("/order/livrator")
+    public ResponseEntity<List<Order>> findByLivrator(String livrator) {
         try {
-            List<Order> orders = orderRepository.findByLivratorId(livratorId);
+            List<Order> orders = orderRepository.findByLivrator(livrator);
 
             if (orders.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);

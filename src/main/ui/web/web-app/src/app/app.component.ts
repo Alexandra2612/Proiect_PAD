@@ -17,12 +17,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loggeduser=this.loginService.loggedUser;
-    console.log(this.loggeduser)
+    if( localStorage.getItem("loggedUser") != null)
+      this.loggeduser=this.loginService.loggedUser;
   }
 
   logout() {
-    this.loginService.addLoggedUser(undefined);
+    localStorage.removeItem('loggedUser')
     this.loggeduser=undefined;
   }
 
