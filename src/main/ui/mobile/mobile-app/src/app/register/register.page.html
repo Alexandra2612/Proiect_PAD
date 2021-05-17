@@ -13,22 +13,33 @@
     <h1>Signup</h1>
 
     <div class="form-container">
-      <ion-item>
-        <ion-label position="floating">Name</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password"></ion-input>
-        <ion-icon name="eye" slot="end"></ion-icon>
-      </ion-item>
+      <div [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input  type="text" formControlName="nume" required placeholder= "Name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" formControlName="username" required placeholder= "Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password" required placeholder= "Password"></ion-input>
+        </ion-item>
 
-      <ion-button expand="block" class="main-button" routerLink="/login">Sign Up</ion-button>
+        <ion-button expand="block" (click)="onSubmit()" class="main-button" >Sign Up</ion-button>
 
+        <div style="color: #148825" *ngIf="succes">
+          User inregistrat
+        </div>
+        <div style="color: #751124" *ngIf="usernameExists">
+          Username existent
+        </div>
+        <div style="color: #751124" *ngIf="!valid" >
+          Introdu toate datele necesare
+        </div>
+
+      </div>
       <div class="sign-up">
         Already have an account? <ion-button color="dark" fill="clear" routerLink="/login" routerDirection="forward">Sign in</ion-button>
       </div>

@@ -1,50 +1,49 @@
-ion-col {
-  height: 100%;
+
+ion-toolbar {
+  --border-width: 0 !important;
+}
+
+
+.header-md::after {
+  background: none !important;
+}
+
+.container h1 {
+  margin-top: 0;
+}
+
+.backbtn {
+  margin-left: 20px;
+}
+
+.form-container {
+  margin-top: 48px;
+}
+
+.form-container ion-item {
+  --padding-start: 0;
+  --border-color: #DADADA;
+}
+
+.form-container ion-item ion-label {
+  color: #A6A6A6;
+}
+
+.form-container ion-item ion-icon {
+  margin-top: auto;
+  color: #c6cbd4;
+}
+
+.form-container ion-button {
+  margin-top: 48px;
+}
+
+.sign-up {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  h1 {
-    color: #ffffff;
-    margin: 0;
-    position: center;
-  }
-  .product-info{
-    h6 {
-      color: #ffffff;
-      margin: 0;
-      position: center;
-    }
-  }
-
-
-  img {
-    position: center;
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    border-radius: 20px;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.16);
-  }
 }
 
-.title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 32px;
-
-  h2 {
-    margin: 0 0 0 16px;
-    color: #434343;
-  }
-
-  p {
-    margin: 0 16px 0 0;
-    color: #656565;
-  }
+.sign-up ion-button {
+  margin: 0;
 }
-

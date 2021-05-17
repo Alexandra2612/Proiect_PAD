@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>restaurant-menu</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" class="backbtn" routerLink="/restaurant" routerDirection="back">
+        <img src='../../assets/back-dark.svg' />
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Food! <ion-icon name="fast-food-outline"></ion-icon></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<div class="title ion-padding">
+  <h1>{{r.nume}}</h1>
+</div>
+<p>{{r.descriere}}</p>
 
+
+<ion-content>
+<div class="product-slider ion-padding-start">
+  <ion-slides  pager="true">
+    <ion-slide *ngFor="let item of menulist">
+      <ion-col class="ion-text-left">
+        <app-menu-item [item1]="item"> </app-menu-item>
+      </ion-col>
+    </ion-slide>
+  </ion-slides>
+</div>
 </ion-content>
+
+

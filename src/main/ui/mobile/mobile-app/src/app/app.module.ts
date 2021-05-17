@@ -8,8 +8,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {RestaurantPage} from "./restaurant/restaurant.page";
 import {RestaurantPageModule} from "./restaurant/restaurant.module";
+import {RestaurantMenuPage} from "./restaurant-menu/restaurant-menu.page";
+import {RestaurantMenuPageModule} from "./restaurant-menu/restaurant-menu.module";
 import {HttpClient, HttpClientModule, HttpErrorResponse} from "@angular/common/http";
-
 
 @NgModule({
   declarations: [AppComponent],

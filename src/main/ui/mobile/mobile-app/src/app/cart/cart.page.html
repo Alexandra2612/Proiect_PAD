@@ -1,9 +1,45 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cart</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" class="backbtn" routerLink="/restaurant" routerDirection="back">
+        <img src='../../assets/back-dark.svg' />
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Food! <ion-icon name="fast-food-outline"></ion-icon></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content fullscreen="true">
+  <h1 class="title">Cart <ion-icon name="cart-outline"></ion-icon></h1>
+  <div *ngIf="cartProductList" class="orderbox" >
+    <div class="row"  *ngFor="let item of cartProductList">
+  <div class="cart-items">
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-info">
+          <img class="product-image" src ="assets/{{item.product.imagine}}">
+          <h1>{{item.product.nume}}</h1>
+          <h3 *ngIf="item.product.toppinguri && item.product.toppinguri!=''" >-{{item.product.toppinguri.nume}}</h3>
+          <h2 class="bucati">{{item.num}}</h2>
+          <h1 class="pret">{{item.product.pret}} lei</h1>
+          <div class="buttondelete">
+            <ion-button (click)="remove(item.product)">Sterge Produs</ion-button>
+          </div>
+          <br>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+    </div>
+  </div>
+
+  <div >
+    <h1>TOTAL: {{getTotal()}} lei</h1>
+    <ion-button (click)="send()">Trimite Comanda</ion-button>
+  </div>
 </ion-content>
+
+
+
