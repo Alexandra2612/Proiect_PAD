@@ -1,0 +1,34 @@
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()" class="form form-register">
+
+  <pre></pre>
+  <div class="form-field">
+    <label class="user" ><span class="hidden">Adresa</span></label>
+    <pre></pre>
+    <input   type="text" formControlName="adresa" placeholder= "Adresa"  >
+
+  </div>
+
+
+  <pre></pre>
+  <div class="form-field">
+    <label class="lock" ><span class="hidden">Numar telefon</span></label>
+    <pre></pre>
+    <input    type="text" placeholder="Numar telefon" >
+  </div>
+  <pre></pre>
+  <br>
+
+  <div class="form-field">
+    <button mat-raised-button type="submit" color="warm">Trimite comanda</button>
+  </div>
+
+
+
+</form>
+<div *ngIf="send", style="color: green">
+  Comanda trimisa!
+</div>
+
+<div *ngIf="valid==1", style="color: red">
+  Completeaza toate campurile pentru a valida comanda
+</div>

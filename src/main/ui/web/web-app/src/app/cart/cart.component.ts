@@ -15,15 +15,20 @@ export class CartComponent implements OnInit {
 
   cartProductList: any;
   newNumber: any;
+  isLogged:boolean;
 
   constructor(private cartService: CartService, private loginService:LoginService) {
+    if( localStorage.getItem("loggedUser") == null)
+    {
+      console.log("UNDEFINED")
+      this.isLogged=false
+    }
+    else this.isLogged=true;
   }
 
   ngOnInit(): void {
 
     this.cartProductList = this.cartService.getProductList();
-    console.log(this.cartProductList)
-    console.log(this.newNumber);
 
   }
 
@@ -40,6 +45,12 @@ export class CartComponent implements OnInit {
 }
 
   send() {
+   if( localStorage.getItem("loggedUser") == null)
+      {
+        console.log("UNDEFINED")
+        this.isLogged=false
+      }
+   else this.isLogged=true;
 
   }
 }
