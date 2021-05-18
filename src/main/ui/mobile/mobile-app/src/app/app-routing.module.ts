@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'wellcome',
     pathMatch: 'full'
   },
 
@@ -37,6 +37,11 @@ const routes: Routes = [
     path: 'wellcome',
     loadChildren: () => import('./wellcome/wellcome.module').then( m => m.WellcomePageModule)
   },
+  {
+    path: 'orderform',
+    loadChildren: () => import('./orderform/orderform.module').then( m => m.OrderformPageModule)
+  },
+
 
 
 

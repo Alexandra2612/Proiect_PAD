@@ -1,0 +1,30 @@
+
+
+<div [formGroup]="orderForm" (ngSubmit)="onSubmit()" class="form form-register">
+
+  <pre></pre>
+  <div class="form-field">
+    <label class="user" ><span class="hidden">Adresa</span></label>
+    <pre></pre>
+    <input   type="text" formControlName="adresa" placeholder= "Adresa"  >
+
+  </div>
+
+
+  <pre></pre>
+
+
+  <div class="form-field">
+    <ion-button type="submit" (click)="onSubmit()">Trimite comanda</ion-button>
+  </div>
+
+
+
+</div>
+<div *ngIf="send", style="color: green">
+  Comanda trimisa!
+</div>
+
+<div *ngIf="valid==1", style="color: red">
+  Completeaza toate campurile pentru a valida comanda
+</div>
