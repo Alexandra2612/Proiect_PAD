@@ -10,7 +10,7 @@
 
 <ion-content class="ion-padding" *ngIf="loggeduser==undefined">
   <ion-content >
-    <div class="container" class="ion-padding container">
+    <div class="container">
       <h1>Login</h1>
 
       <div class="form-container">
@@ -49,8 +49,8 @@
     <a routerLink="/register" style="color: crimson;"> Register</a>
   </ion-card-content>
 </ion-content>
-<mat-card *ngIf="loggeduser">
-  <mat-card-content>
+<div *ngIf="loggeduser">
+  <ion-card-content>
     {{loggeduser.nume}} {{loggeduser.prenume}}, bine ai venit!
-  </mat-card-content>
-</mat-card>
+  </ion-card-content>
+</div>

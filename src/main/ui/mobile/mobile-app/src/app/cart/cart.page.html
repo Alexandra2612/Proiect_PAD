@@ -39,6 +39,12 @@
     <h1>TOTAL: {{getTotal()}} lei</h1>
     <ion-button (click)="send()">Trimite Comanda</ion-button>
   </div>
+
+  <app-orderform [orderList]="cartProductList"  [total]="getTotal()"></app-orderform>
+
+  <br><br>
+
+
 </ion-content>
 
 

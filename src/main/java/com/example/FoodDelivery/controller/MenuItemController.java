@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:62507")
+@CrossOrigin(origins = "http://localhost:8100")
 @RestController
 @RequestMapping("/api")
 public class MenuItemController {
